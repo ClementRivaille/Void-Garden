@@ -8,6 +8,9 @@ var base: Sprite
 var MIN_SIZE: float = 0.6
 var MAX_SIZE: float = 1.6
 
+func _init():
+  scale = Vector2()
+
 func _ready():
   tween = $Tween
   petals = $Petals

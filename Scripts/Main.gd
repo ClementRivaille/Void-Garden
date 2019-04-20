@@ -19,7 +19,6 @@ var index_ship_selected: int = -1
 var nb_ships := 0
 var f_before_new_ship := 2
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
   spawner = $Spawner
   ui = $UI
@@ -108,6 +107,10 @@ func _input(event: InputEvent):
     pause.visible = !pause.visible
     if nb_ships == 0:
       title.open_menu(pause.visible)
+
+func _notification(what: int):
+  if what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST:
+    quit()
 
 func quit():
   spawner.delete_all()
