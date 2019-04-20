@@ -1,0 +1,13 @@
+[remap]
+
+importer="image"
+type="Image"
+path="res://.import/selected.svg-09fb1915ab6cadcd48a0aac3384b1d28.image"
+
+[deps]
+
+source_file="res://Assets/Sprites/selected.svg"
+dest_files=[ "res://.import/selected.svg-09fb1915ab6cadcd48a0aac3384b1d28.image" ]
+
+[params]
+

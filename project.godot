@@ -1,0 +1,90 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Node2D",
+"class": "BlackHole",
+"language": "GDScript",
+"path": "res://Scripts/BlackHole.gd"
+}, {
+"base": "Button",
+"class": "DirectionButton",
+"language": "GDScript",
+"path": "res://Scripts/DirectionButton.gd"
+}, {
+"base": "Node2D",
+"class": "Flower",
+"language": "GDScript",
+"path": "res://Scripts/Flower.gd"
+}, {
+"base": "AudioStreamPlayer",
+"class": "Sampler",
+"language": "GDScript",
+"path": "res://Scripts/Sampler.gd"
+}, {
+"base": "RigidBody2D",
+"class": "Seed",
+"language": "GDScript",
+"path": "res://Scripts/Seed.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Ship",
+"language": "GDScript",
+"path": "res://Scripts/Ship.gd"
+}, {
+"base": "Node2D",
+"class": "Spawner",
+"language": "GDScript",
+"path": "res://Scripts/Spawner.gd"
+}, {
+"base": "Control",
+"class": "Title",
+"language": "GDScript",
+"path": "res://Scripts/Title.gd"
+}, {
+"base": "Control",
+"class": "UI",
+"language": "GDScript",
+"path": "res://Scripts/UI.gd"
+} ]
+_global_script_class_icons={
+"BlackHole": "",
+"DirectionButton": "",
+"Flower": "",
+"Sampler": "",
+"Seed": "",
+"Ship": "",
+"Spawner": "",
+"Title": "",
+"UI": ""
+}
+
+[application]
+
+config/name="Void Garden"
+run/main_scene="res://Scenes/Main.tscn"
+config/icon="res://dev/icon.png"
+
+[debug]
+
+gdscript/warnings/unused_argument=false
+gdscript/warnings/return_value_discarded=false
+
+[display]
+
+window/size/width=1920
+window/size/height=1080
+window/size/fullscreen=true
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"

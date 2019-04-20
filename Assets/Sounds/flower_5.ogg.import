@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/flower_5.ogg-d1dc938a1f7733eea3e89e214bfd92c9.oggstr"
+
+[deps]
+
+source_file="res://Assets/Sounds/flower_5.ogg"
+dest_files=[ "res://.import/flower_5.ogg-d1dc938a1f7733eea3e89e214bfd92c9.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

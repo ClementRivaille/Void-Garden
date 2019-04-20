@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/Volume_slide.gd" type="Script" id=1]
+[ext_resource path="res://Assets/GUI/playtime.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+font_data = ExtResource( 2 )
+
+[node name="Volume slide" type="HBoxContainer"]
+margin_right = 1000.0
+margin_bottom = 77.0
+grow_vertical = 0
+rect_min_size = Vector2( 700, 0 )
+custom_constants/separation = 30
+script = ExtResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_right = 200.0
+margin_bottom = 77.0
+rect_min_size = Vector2( 200, 0 )
+custom_fonts/font = SubResource( 1 )
+text = "Ships
+"
+align = 2
+valign = 1
+
+[node name="HSlider" type="HSlider" parent="."]
+margin_left = 230.0
+margin_right = 1030.0
+margin_bottom = 36.0
+rect_min_size = Vector2( 800, 36 )
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[connection signal="value_changed" from="HSlider" to="." method="set_volume"]

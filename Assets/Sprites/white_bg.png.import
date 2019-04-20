@@ -1,0 +1,13 @@
+[remap]
+
+importer="image"
+type="Image"
+path="res://.import/white_bg.png-169be2cd5615f95ff59f8d402f8a0ac0.image"
+
+[deps]
+
+source_file="res://Assets/Sprites/white_bg.png"
+dest_files=[ "res://.import/white_bg.png-169be2cd5615f95ff59f8d402f8a0ac0.image" ]
+
+[params]
+

@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/GUI/btn_focus_texture.tres" type="StyleBox" id=1]
+[ext_resource path="res://Assets/GUI/btn_texture.tres" type="StyleBox" id=2]
+[ext_resource path="res://Scripts/DirectionButton.gd" type="Script" id=3]
+[ext_resource path="res://Assets/Sprites/arrow.svg" type="Texture" id=4]
+[ext_resource path="res://Assets/GUI/plant_icon.png" type="Texture" id=5]
+
+[node name="DirectionButton" type="Button"]
+margin_right = 70.0
+margin_bottom = 90.0
+rect_min_size = Vector2( 70, 0 )
+focus_mode = 0
+custom_styles/hover = ExtResource( 1 )
+custom_styles/pressed = ExtResource( 1 )
+custom_styles/focus = ExtResource( 1 )
+custom_styles/normal = ExtResource( 2 )
+enabled_focus_mode = 0
+script = ExtResource( 3 )
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+margin_left = 35.0
+margin_top = 45.0
+margin_right = 35.0
+margin_bottom = 45.0
+rect_scale = Vector2( 0.2, 0.2 )
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer"]
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 4
+
+[node name="Seed" type="TextureRect" parent="."]
+visible = false
+margin_top = 74.0
+margin_right = 139.0
+margin_bottom = 94.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 6
+

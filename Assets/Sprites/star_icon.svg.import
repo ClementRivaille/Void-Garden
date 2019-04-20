@@ -1,0 +1,13 @@
+[remap]
+
+importer="image"
+type="Image"
+path="res://.import/star_icon.svg-11474b3d9b6ce9d651b6983b00e3ef11.image"
+
+[deps]
+
+source_file="res://Assets/Sprites/star_icon.svg"
+dest_files=[ "res://.import/star_icon.svg-11474b3d9b6ce9d651b6983b00e3ef11.image" ]
+
+[params]
+

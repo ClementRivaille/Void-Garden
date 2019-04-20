@@ -1,0 +1,110 @@
+[gd_resource type="AudioBusLayout" load_steps=11 format=2]
+
+[sub_resource type="AudioEffectLimiter" id=1]
+resource_name = "Limiter"
+soft_clip_db = 0.0
+
+[sub_resource type="AudioEffectCompressor" id=2]
+resource_name = "Compressor"
+
+[sub_resource type="AudioEffectReverb" id=3]
+resource_name = "Reverb"
+room_size = 0.67
+damping = 0.31
+spread = 0.47
+hipass = 0.29
+wet = 0.54
+
+[sub_resource type="AudioEffectCompressor" id=4]
+resource_name = "Compressor"
+threshold = -6.2
+ratio = 6.0
+gain = 4.8
+
+[sub_resource type="AudioEffectReverb" id=5]
+resource_name = "Reverb"
+room_size = 0.55
+damping = 0.39
+spread = 0.82
+hipass = 0.21
+wet = 0.63
+
+[sub_resource type="AudioEffectCompressor" id=6]
+resource_name = "Compressor"
+ratio = 7.1
+gain = 3.4
+
+[sub_resource type="AudioEffectDelay" id=7]
+resource_name = "Delay"
+tap1/pan = 0.4
+
+[sub_resource type="AudioEffectDelay" id=8]
+resource_name = "Delay"
+tap1/level_db = -15.0
+tap2/level_db = -16.0
+
+[sub_resource type="AudioEffectDelay" id=9]
+resource_name = "Delay"
+tap1/level_db = -17.0
+tap2/level_db = -18.0
+
+[sub_resource type="AudioEffectReverb" id=10]
+resource_name = "Reverb"
+room_size = 0.77
+damping = 0.65
+hipass = 0.31
+dry = 0.81
+wet = 0.36
+
+[resource]
+bus/0/effect/0/effect = SubResource( 1 )
+bus/0/effect/0/enabled = true
+bus/1/name = "SFX"
+bus/1/solo = false
+bus/1/mute = false
+bus/1/bypass_fx = false
+bus/1/volume_db = 0.0
+bus/1/send = "Master"
+bus/1/effect/0/effect = SubResource( 2 )
+bus/1/effect/0/enabled = true
+bus/2/name = "Ships"
+bus/2/solo = false
+bus/2/mute = false
+bus/2/bypass_fx = false
+bus/2/volume_db = -10.6
+bus/2/send = "Master"
+bus/2/effect/0/effect = SubResource( 3 )
+bus/2/effect/0/enabled = true
+bus/2/effect/1/effect = SubResource( 4 )
+bus/2/effect/1/enabled = true
+bus/3/name = "Seeds"
+bus/3/solo = false
+bus/3/mute = false
+bus/3/bypass_fx = false
+bus/3/volume_db = -9.7
+bus/3/send = "Master"
+bus/3/effect/0/effect = SubResource( 5 )
+bus/3/effect/0/enabled = true
+bus/3/effect/1/effect = SubResource( 6 )
+bus/3/effect/1/enabled = true
+bus/4/name = "Music"
+bus/4/solo = false
+bus/4/mute = false
+bus/4/bypass_fx = false
+bus/4/volume_db = -5.8
+bus/4/send = "Master"
+bus/5/name = "Collect_Seed"
+bus/5/solo = false
+bus/5/mute = false
+bus/5/bypass_fx = false
+bus/5/volume_db = 0.0
+bus/5/send = "SFX"
+bus/5/effect/0/effect = SubResource( 7 )
+bus/5/effect/0/enabled = true
+bus/5/effect/1/effect = SubResource( 8 )
+bus/5/effect/1/enabled = true
+bus/5/effect/2/effect = SubResource( 9 )
+bus/5/effect/2/enabled = true
+bus/5/effect/3/effect = SubResource( 10 )
+bus/5/effect/3/enabled = true
+

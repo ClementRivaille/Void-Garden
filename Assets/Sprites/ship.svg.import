@@ -1,0 +1,13 @@
+[remap]
+
+importer="image"
+type="Image"
+path="res://.import/ship.svg-0ff5ab674a1d1b63838714c09d264fee.image"
+
+[deps]
+
+source_file="res://Assets/Sprites/ship.svg"
+dest_files=[ "res://.import/ship.svg-0ff5ab674a1d1b63838714c09d264fee.image" ]
+
+[params]
+
