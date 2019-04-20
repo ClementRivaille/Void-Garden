@@ -1,6 +1,6 @@
 extends Node2D
 
-var MAX_SHIPS = 3
+var MAX_SHIPS := 3
 
 export(Array, AudioStream) var flower_sfx: Array
 export(Array, Color) var ships_colors: Array = []
@@ -66,7 +66,8 @@ func select_ship(ship: Ship):
 func select_next_ship():
   index_ship_selected = (index_ship_selected + 1)
   if index_ship_selected < ships.get_child_count():
-    select_ship(ships.get_child(index_ship_selected) as Ship)
+    var ship := ships.get_child(index_ship_selected) as Ship
+    select_ship(ship)
   else:
     unselect_ship()
   
@@ -100,7 +101,7 @@ func create_flower(position: Vector2):
       add_ship()
       f_before_new_ship = (nb_ships) * 2
     
-func _input(event):
+func _input(event: InputEvent):
   if event.is_action_pressed("ui_cancel"):
     pause.visible = !pause.visible
     if nb_ships == 0:

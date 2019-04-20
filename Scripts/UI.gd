@@ -25,7 +25,7 @@ func select_ship(ship: Ship):
   directions_panel.visible = true
   
   for i in range(ship.commands.size()):
-    var btn = direction_btns[i] as DirectionButton
+    var btn := direction_btns[i] as DirectionButton
     btn.set_rotation(ship.commands[i] * PI / 4)
   
   var curr_index: int = (ship.index + ship.commands.size() - 1) % ship.commands.size()
