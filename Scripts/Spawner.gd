@@ -57,3 +57,11 @@ func create_flower(parent: Node) -> Flower:
   if (flowers.size() < 2):
     load_flowers()
   return flower
+
+func delete_all():
+  for s in ships:
+    s.queue_free()
+  for s in seeds:
+    s.queue_free()
+  for f in flowers:
+    f.queue_free()

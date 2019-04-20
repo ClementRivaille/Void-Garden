@@ -29,6 +29,8 @@ func _ready():
   pause = $Pause
   title = $Start
   hole = $BlackHole
+  
+  pause.connect("quit", self, "quit")
   randomize()
   
 func start():
@@ -106,5 +108,7 @@ func _input(event: InputEvent):
     pause.visible = !pause.visible
     if nb_ships == 0:
       title.open_menu(pause.visible)
-    
-    
+
+func quit():
+  spawner.delete_all()
+  get_tree().quit()
